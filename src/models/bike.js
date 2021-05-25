@@ -13,6 +13,10 @@ const BikeSchema = new Schema({
     plate_no: String,
     mileage: String,
     max_power: String,
+    owner_id: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    },
 });
 
 const Bike = model('Bike', BikeSchema);

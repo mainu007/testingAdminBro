@@ -1,11 +1,11 @@
 const AdminBro = require('admin-bro');
 const AdminBroMongoose = require('@admin-bro/mongoose');
-const { Bike } = require('./models/Bike');
+const user = require('./resources/user-resource');
 
 AdminBro.registerAdapter(AdminBroMongoose);
 
 const options = {
-    resources: [Bike],
+    resources: [user],
 };
 
 module.exports = options;
